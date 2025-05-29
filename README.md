@@ -29,27 +29,6 @@ A comprehensive Java console application for managing a delicatessen ordering sy
 - Detailed order breakdown with individual item pricing
 - Professional receipt formatting
 
-## Installation & Setup
-
-### Prerequisites
-- Java 8 or higher
-- Any Java IDE (IntelliJ IDEA, Eclipse, VS Code) or command line
-
-### Running the Application
-
-#### Command Line
-```bash
-# Compile
-javac DeliApp.java
-
-# Run
-java DeliApp
-```
-
-#### IDE
-1. Import the `DeliApp.java` file into your Java project
-2. Run the `DeliApp` class
-
 ## Usage Guide
 
 ### Starting a New Order
@@ -162,31 +141,6 @@ Total: $16.50
 Thank you for your business!
 ```
 
-## Future Enhancements
 
-Potential improvements for future versions:
-- Order history and customer management
-- Nutritional information display
-- Online ordering capability
-- Inventory management
-- Discount and promotion system
-- Multiple payment methods
-- Order scheduling and pickup times
-
-## Contributing
-
-Feel free to fork this project and submit pull requests for improvements. Some areas that could use enhancement:
-- Unit tests
-- GUI interface
-- Database integration
-- API endpoints for web integration
-
-## License
-
-This project is open source and available under the MIT License.
-
----
-
-*Built with ❤️ for sandwich lovers everywhere!*
 
 
