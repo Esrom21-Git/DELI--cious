@@ -141,7 +141,7 @@ Total: $16.50
 Thank you for your business!
 ```
 Interesting Code Highlight 🔍
-One of the most interesting aspects of your code is the dynamic pricing system for premium toppings. Here's the clever implementation:
+One of the most interesting aspects of this code is the dynamic pricing system for premium toppings. Here's the clever implementation:
 
 public double getPrice(SandwichSize size) {
     double basePrice = 0;
@@ -170,4 +170,4 @@ Why this is interesting:
 Context-Aware Pricing: The same topping (like steak) costs different amounts based on sandwich size, which mirrors real-world deli pricing
 Flexible Extra Portions: The boolean extra flag allows customers to get extra meat/cheese for an additional cost
 Scalable Design: Adding new sizes only requires updating the switch statement
-Business Logic Separation: Pricing logic is encapsulated in the topping classes rather than scattered throughout the application
+
