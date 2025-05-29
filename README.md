@@ -1,233 +1,192 @@
-# 🥪 DELI-cious Point of Sales System
+# DELI-cious 🥪
 
-A robust Java-based Point of Sales application for a custom sandwich shop, implementing comprehensive Object-Oriented Programming principles.
+A comprehensive Java console application for managing a delicatessen ordering system. Build custom sandwiches, add drinks and chips, and generate detailed receipts for your customers.
 
-## 📋 Table of Contents
-- [Features](#features)
-- [System Requirements](#system-requirements)
-- [Installation & Setup](#installation--setup)
-- [File Structure](#file-structure)
-- [How to Use](#how-to-use)
-- [Pricing Structure](#pricing-structure)
-- [Technical Implementation](#technical-implementation)
-- [Future Enhancements](#future-enhancements)
-- [Screenshots](#screenshots)
+## Features
 
-## ✨ Features
+### 🥪 Sandwich Customization
+- **Multiple bread types**: White, Wheat, Rye, Wrap
+- **Three sizes**: 4", 8", 12" with size-based pricing
+- **Premium meats**: Steak, Ham, Salami, Roast Beef, Chicken, Bacon
+- **Cheese selection**: American, Provolone, Cheddar, Swiss
+- **Fresh toppings**: Lettuce, Peppers, Onions, Tomatoes, Jalapeños, Cucumbers, Pickles, Guacamole, Mushrooms
+- **Sauce variety**: Mayo, Mustard, Ketchup, Ranch, Thousand Islands, Vinaigrette
+- **Toasted option**: Choose to have your sandwich toasted
 
-### Core Functionality
-- **Complete Order Management**: Create, modify, and process customer orders
-- **Sandwich Customization**: Full sandwich builder with bread, size, toppings, and extras
-- **Multiple Item Types**: Sandwiches, drinks, and chips support
-- **Dynamic Pricing**: Automatic price calculation based on size and premium toppings
-- **Receipt Generation**: Automated receipt creation with timestamps
-- **Input Validation**: Robust error handling and user input validation
+### 🥤 Beverages & Sides
+- **Drinks**: Small ($2.00), Medium ($2.50), Large ($3.00) with custom flavors
+- **Chips**: Flat rate $1.50 with custom types
 
-### Technical Features
-- **Object-Oriented Design**: Proper use of classes, interfaces, inheritance, and polymorphism
-- **Type Safety**: Extensive use of enums for menu options
-- **File I/O Operations**: Automatic receipt saving with organized file structure
-- **Memory Management**: Efficient use of collections and data structures
-- **Modular Architecture**: Clean separation of concerns across multiple files
+### 📋 Order Management
+- Add multiple items to a single order
+- Real-time order summary with itemized pricing
+- Order confirmation system
+- Automatic receipt generation with timestamps
 
-## 🔧 System Requirements
+### 📄 Receipt System
+- Automatically saves receipts to `receipts/` directory
+- Timestamped file names (format: `YYYYMMDD-HHMMSS.txt`)
+- Detailed order breakdown with individual item pricing
+- Professional receipt formatting
 
-- **Java Version**: Java 8 or higher
-- **Operating System**: Windows, macOS, or Linux
-- **Memory**: Minimum 256MB RAM
-- **Storage**: 50MB free space for application and receipts
+## Installation & Setup
 
-## 🚀 Installation & Setup
+### Prerequisites
+- Java 8 or higher
+- Any Java IDE (IntelliJ IDEA, Eclipse, VS Code) or command line
 
-### Step 1: Clone or Download
+### Running the Application
+
+#### Command Line
 ```bash
-# If using Git
-git clone <repository-url>
-cd deli-pos-system
+# Compile
+javac DeliApp.java
 
-# Or download and extract the ZIP file
-```
-
-### Step 2: Compile the Application
-```bash
-# Compile all Java files
-javac *.java
-
-# Verify compilation (should show .class files)
-ls *.class
-```
-
-### Step 3: Run the Application
-```bash
-# Start the POS system
+# Run
 java DeliApp
 ```
 
-### Step 4: First Run Setup
-- The application will automatically create a `receipts/` folder
-- No additional configuration required
+#### IDE
+1. Import the `DeliApp.java` file into your Java project
+2. Run the `DeliApp` class
 
-## 📁 File Structure
+## Usage Guide
 
-```
-DELI-cious-POS/
-│
-├── DeliApp.java          # Main application & user interface
-├── DeliModels.java       # Business logic & data models
-├── DeliEnums.java        # Enums & constants
-├── README.md             # Documentation (this file)
-├── SignatureSandwiches.java  # Bonus feature implementation
-│
-└── receipts/             # Auto-generated receipt storage
-    ├── 20231215-143022.txt
-    ├── 20231215-144135.txt
-    └── ...
-```
-
-## 🎯 How to Use
-
-### Starting the Application
-1. Run `java DeliApp`
-2. You'll see the welcome screen with main menu options
-
-### Creating an Order
-1. Select "1) New Order" from the home screen
-2. Choose from the order menu:
-   - **Add Sandwich**: Build custom sandwiches step-by-step
-   - **Add Drink**: Select size and flavor
-   - **Add Chips**: Choose chip type
-   - **Checkout**: Review and confirm order
+### Starting a New Order
+1. Launch the application
+2. Select "1) New Order" from the home screen
+3. Choose from the order options:
+   - Add Sandwich
+   - Add Drink
+   - Add Chips
+   - Checkout
+   - Cancel Order
 
 ### Building a Sandwich
-1. **Select Bread**: White, Wheat, Rye, or Wrap
-2. **Choose Size**: 4", 8", or 12"
-3. **Add Meats**: Premium toppings with extra options
-4. **Add Cheese**: Premium toppings with extra options
-5. **Add Toppings**: Free regular toppings
-6. **Add Sauces**: Free sauce options
-7. **Toasted Option**: Yes or No
+1. Select bread type and size
+2. Add meats (with optional extra portions)
+3. Add cheeses (with optional extra portions)
+4. Choose regular toppings (free)
+5. Select sauces (free)
+6. Decide if you want it toasted
 
-### Completing an Order
+### Completing Your Order
 1. Review your order summary
 2. Confirm the total price
-3. Confirm or cancel the order
-4. Receipt automatically saved to `receipts/` folder
+3. Approve the order to generate a receipt
+4. Receipt is automatically saved to the `receipts/` folder
 
-## 💰 Pricing Structure
+## Pricing Structure
 
 ### Sandwich Base Prices
-| Size | Price |
-|------|-------|
-| 4"   | $5.50 |
-| 8"   | $7.00 |
-| 12"  | $8.50 |
+- 4" sandwich: $5.50
+- 8" sandwich: $7.00
+- 12" sandwich: $8.50
 
-### Premium Toppings
+### Premium Add-ons
 
-#### Meats
-| Size | Regular | Extra |
-|------|---------|-------|
-| 4"   | $1.00   | +$0.50|
-| 8"   | $2.00   | +$1.00|
-| 12"  | $3.00   | +$1.50|
+#### Meat Pricing
+| Size | Base Price | Extra Price |
+|------|------------|-------------|
+| 4"   | $1.00      | +$0.50      |
+| 8"   | $2.00      | +$1.00      |
+| 12"  | $3.00      | +$1.50      |
 
-#### Cheese
-| Size | Regular | Extra |
-|------|---------|-------|
-| 4"   | $0.75   | +$0.30|
-| 8"   | $1.50   | +$0.60|
-| 12"  | $2.25   | +$0.90|
+#### Cheese Pricing
+| Size | Base Price | Extra Price |
+|------|------------|-------------|
+| 4"   | $0.75      | +$0.30      |
+| 8"   | $1.50      | +$0.60      |
+| 12"  | $2.25      | +$0.90      |
 
 ### Other Items
-- **Regular Toppings**: FREE (lettuce, tomatoes, onions, etc.)
-- **Sauces**: FREE (mayo, mustard, ranch, etc.)
-- **Drinks**: Small ($2.00), Medium ($2.50), Large ($3.00)
+- **Drinks**: $2.00 (Small), $2.50 (Medium), $3.00 (Large)
 - **Chips**: $1.50 (all types)
+- **Regular toppings and sauces**: Free
 
-## 🛠 Technical Implementation
+## Project Structure
 
-### Object-Oriented Principles Used
+```
+DeliApp.java
+├── DeliApp (Main Application Class)
+├── OrderItem (Interface)
+├── Order (Order Management)
+├── Sandwich (Sandwich Builder)
+├── Drink (Beverage Class)
+├── Chips (Side Item Class)
+├── Enums:
+│   ├── BreadType
+│   ├── SandwichSize
+│   ├── MeatType
+│   ├── CheeseType
+│   ├── RegularTopping
+│   ├── SauceType
+│   └── DrinkSize
+└── Premium Topping Classes:
+    ├── MeatTopping
+    └── CheeseTopping
+```
 
-#### Encapsulation
-- Private fields with public methods for controlled access
-- Data hiding in all model classes
+## Technical Highlights
 
-#### Inheritance
-- `OrderItem` interface implemented by `Sandwich`, `Drink`, and `Chips`
-- Common behavior defined in interface
-
-#### Polymorphism
-- Different item types handled uniformly through `OrderItem` interface
-- Method overriding for specific item behaviors
-
-#### Abstraction
-- Interface defines contract without implementation details
-- Complex pricing logic abstracted in individual classes
-
-### Design Patterns
-- **Strategy Pattern**: Different pricing strategies for different item types
+### Design Patterns Used
+- **Strategy Pattern**: Different pricing strategies for different sandwich sizes
 - **Builder Pattern**: Step-by-step sandwich construction
-- **Factory Pattern**: Order item creation
+- **Interface Implementation**: Common `OrderItem` interface for all orderable items
 
-### Data Structures Used
-- `ArrayList<>` for dynamic item storage
-- `enum` types for type-safe menu options
-- `StringBuilder` for efficient string building
+### Key Features
+- **Type Safety**: Extensive use of enums to prevent invalid input
+- **Dynamic Pricing**: Size-based pricing calculations for premium toppings
+- **File I/O**: Automatic receipt generation with error handling
+- **Input Validation**: Robust user input handling with error recovery
+- **Memory Management**: Efficient use of collections and stream operations
 
-## 🔮 Future Enhancements
+## File Output
 
-### Planned Features
-- **Signature Sandwiches**: Pre-configured sandwich templates
-- **Customer Management**: Customer profiles and order history
-- **Inventory Tracking**: Real-time ingredient availability
-- **Online Ordering**: Web interface integration
-- **Payment Processing**: Multiple payment method support
-- **Reporting System**: Sales analytics and reporting
-
-### Technical Improvements
-- **Database Integration**: Persistent data storage
-- **GUI Interface**: Swing or JavaFX user interface
-- **Multi-threading**: Concurrent order processing
-- **API Development**: RESTful service endpoints
-- **Unit Testing**: Comprehensive test coverage
-
-## 📸 Screenshots
-
-### Home Screen
-```
-=== DELI-cious Home ===
-1) New Order
-0) Exit
-Please choose an option:
-```
-
-### Order Screen
-```
-=== Order Screen ===
-1) Add Sandwich
-2) Add Drink
-3) Add Chips
-4) Checkout
-0) Cancel Order
-Please choose an option:
-```
-
-### Sample Receipt
+Receipts are saved in the following format:
 ```
 DELI-cious Receipt
-Date: 2023-12-15 14:30:22
+Date: 2025-05-29 14:30:15
 =====================================
-Large Pepsi Drink - $3.00
-8" White Sandwich
-  Meats: Steak, Bacon (extra)
-  Cheeses: Cheddar
+12" White Sandwich
+  Meats: Steak, Ham (extra)
+  Cheeses: Provolone
   Toppings: Lettuce, Tomatoes, Onions
-  Sauces: Mayo, Ranch
-  (Toasted) - $12.50
-Doritos Chips - $1.50
-Total: $17.00
+  Sauces: Mayo, Mustard
+  (Toasted) - $12.00
+Large Coke Drink - $3.00
+Lays Chips - $1.50
+=====================================
+Total: $16.50
 =====================================
 Thank you for your business!
 ```
+
+## Future Enhancements
+
+Potential improvements for future versions:
+- Order history and customer management
+- Nutritional information display
+- Online ordering capability
+- Inventory management
+- Discount and promotion system
+- Multiple payment methods
+- Order scheduling and pickup times
+
+## Contributing
+
+Feel free to fork this project and submit pull requests for improvements. Some areas that could use enhancement:
+- Unit tests
+- GUI interface
+- Database integration
+- API endpoints for web integration
+
+## License
+
+This project is open source and available under the MIT License.
+
+---
+
+*Built with ❤️ for sandwich lovers everywhere!*
 
 
