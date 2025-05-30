@@ -171,3 +171,8 @@ Context-Aware Pricing: The same topping (like steak) costs different amounts bas
 Flexible Extra Portions: The boolean extra flag allows customers to get extra meat/cheese for an additional cost
 Scalable Design: Adding new sizes only requires updating the switch statement
 
+![Screenshot](https://user-images.githubusercontent.com/xxxxxx/filename.png)
+![Screenshot 2025-05-29 162326](https://github.com/user-attachments/assets/70d3d3ba-e6f3-4ba7-a915-33976f329403)
+![Screenshot 2025-05-29 162302](https://github.com/user-attachments/assets/2237bf5c-08d3-4a39-afa4-8b8e925772fe)
+![Screenshot 2025-05-29 162229](https://github.com/user-attachments/assets/7c0d6bc3-50ac-4491-ad9a-4dceed9d6e63)
+![Screenshot 2025-05-29 154519](https://github.com/user-attachments/assets/23de9d26-8853-46ce-8ba8-1e31b89094ce)
