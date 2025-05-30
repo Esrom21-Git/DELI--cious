@@ -171,8 +171,45 @@ Context-Aware Pricing: The same topping (like steak) costs different amounts bas
 Flexible Extra Portions: The boolean extra flag allows customers to get extra meat/cheese for an additional cost
 Scalable Design: Adding new sizes only requires updating the switch statement
 
+
+This UML class diagram visualizes the structure of my DELI-cious Java application. Here's what it shows:
 ![Screenshot](https://user-images.githubusercontent.com/xxxxxx/filename.png)
 ![Screenshot 2025-05-29 162326](https://github.com/user-attachments/assets/70d3d3ba-e6f3-4ba7-a915-33976f329403)
 ![Screenshot 2025-05-29 162302](https://github.com/user-attachments/assets/2237bf5c-08d3-4a39-afa4-8b8e925772fe)
 ![Screenshot 2025-05-29 162229](https://github.com/user-attachments/assets/7c0d6bc3-50ac-4491-ad9a-4dceed9d6e63)
 ![Screenshot 2025-05-29 154519](https://github.com/user-attachments/assets/23de9d26-8853-46ce-8ba8-1e31b89094ce)
+
+Key Components:
+Main Application Layer:
+
+DeliApp - The main application class that handles user interaction and menu flow
+Contains methods for displaying menus, processing user input, and managing the order workflow
+
+Core Business Logic:
+
+Order - Manages a collection of order items and calculates totals
+OrderItem - Interface that all orderable items implement (Sandwich, Drink, Chips)
+
+Product Classes:
+
+Sandwich - Complex product with multiple customizable components
+Drink - Simple product with size and flavor
+Chips - Basic product with just a type
+
+Topping Classes:
+
+MeatTopping and CheeseTopping - Handle premium toppings with pricing logic
+
+Enumerations:
+
+Various enums for different options (BreadType, SandwichSize, MeatType, etc.)
+Each enum contains display names and relevant pricing information
+
+Key Relationships:
+
+Composition: DeliApp manages an Order, which contains multiple OrderItems
+Implementation: Sandwich, Drink, and Chips all implement the OrderItem interface
+Association: Sandwich uses various enums and topping classes for its configuration
+Dependency: Topping classes depend on their respective type enums and sandwich size for pricing
+
+The diagram shows a well-structured object-oriented design with clear separation of concerns, proper use of interfaces, and encapsulation of business logic within appropriate classes.
